@@ -1,0 +1,32 @@
+<?php
+
+    views_inline_ajax();
+
+    function views_inline_ajax(){
+        if(request_uri() == '/admin/orders'){
+            drupal_add_js(drupal_get_path('module', 'views_inline_ajax') . '/views_inline_ajax.js');
+            drupal_add_css(drupal_get_path('module', 'views_inline_ajax') . '/views_inline_ajax.css');
+        }
+    }
+
+    function views_inline_ajax_menu() {
+        $items = array();
+
+        $items['admin/orders/set'] = array(
+            'title' => 'Ajax SET',
+            'page callback' => 'ajax_callback',
+            'access callback' => 'user_access',
+            'access arguments' => array('access content'),
+            'type' => MENU_CALLBACK,
+        );
+
+        return $items;
+    }
+
+    function ajax_callback() {
+        $nid = $_POST['nid'];
+        $status = $_POST['status'];
+        $node = node_load($nid);
+        $node->field_status['und'][0]['value'] = $status;
+        node_save($node);
+    }

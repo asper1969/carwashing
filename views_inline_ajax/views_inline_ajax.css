@@ -1,0 +1,59 @@
+.views-field-nothing .ajax-progress{display: none;}
+.views-field-nothing .ajax-progress.in-progress{display: block;}
+
+.views-field-nothing .ajax-progress.in-progress{
+    position: absolute;
+    left: 0;
+}
+
+.btn.button{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#block-system-main table.views-table{
+    table-layout: fixed;
+}
+
+#block-system-main table.views-table tr th:last-of-type,
+#block-system-main table.views-table tr td:last-of-type{
+    width: 0;
+    overflow: hidden;
+}
+
+#block-system-main table.views-table tr th.views-field-field-status-editable,
+#block-system-main table.views-table tr td.views-field-field-status-editable{
+    width: 232px;
+}
+
+#block-system-main table.views-table tr th.views-field-field-status-editable .views-row-edit-static,
+#block-system-main table.views-table tr td.views-field-field-status-editable .views-row-edit-static{
+    display: none;
+}
+
+td.views-field-nothing{
+    position: relative;
+}
+
+td.views-field-edit-node{
+    text-align: center;
+}
+
+td.views-field-edit-node a{
+    margin: 0;
+}
+
+#edit-actions{
+    display: none;
+}
+
+.feed-icon{
+    text-align: right;
+}
+
+body.manager ul#admin-menu-menu >li:nth-of-type(4){
+    display: none;
+}

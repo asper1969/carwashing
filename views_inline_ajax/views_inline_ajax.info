@@ -1,0 +1,8 @@
+name = Inline views editing ajax
+description = Ajaxify inline views editing for orders.
+
+core = 7.x
+package = Webform
+dependencies[] = webform
+
+files[] = views_inline_ajax.module
